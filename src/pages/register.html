@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="/src/assets/css/style.css">
+
+</head>
+
+<body class="register">
+
+    <div class="register-container">
+
+        <div class="logo">
+            <img src="/src/assets/svg/logo.svg" alt="Logo">
+        </div>
+
+        <h3 class="register-quote">Begin your journey with us 🏢</h3>
+        <p class="small-quote">Streamline and Enjoy Asset Management!</p>
+
+        <form action="" id="register-form" autocomplete="off">
+            <div class="form-field">
+
+                <div class="input-field">
+                    <label for="username">Username or Email</label>
+                    <input type="text" name="username" id="username" placeholder="Enter your username or email">
+                </div>
+
+                <div class="input-field">
+                    <label for="phone">Phone</label>
+                    <input type="tel" name="phone" id="phone" maxlength="10" placeholder="Enter your phone">
+                </div>
+
+                <div class="input-field">
+                    <label for="password">Password</label>
+                    <div class="pass">
+                        <input type="password" name="password" id="password" placeholder="Enter your password">
+                        <i class="fa-solid fa-eye-slash eye"></i>
+                    </div>
+                </div>
+
+                <div class="input-field">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" name="confirm_password" id="confirm-password" placeholder="Enter your confirm password">
+                </div>
+
+                <div class="checkbox-field">
+                    <label class="container">
+                        <input checked="checked" type="checkbox">
+                        <div class="checkmark"></div>
+                    </label>
+                    <p>I agree to <a href="#">privacy policy & terms</a></p>
+                </div>
+
+                <input type="submit" value="Sign Up">
+
+                <div class="have-account">
+                    <p>Already have an account? <a href="login.html">Sign in instead</a></p>
+                </div>
+
+            </div>
+        </form>
+
+    </div>
+
+    <!-- Toast Message -->
+    <div id="toast" class="toast hidden">Successfully Registered!</div>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- jQuery Validation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js" integrity="sha512-KFHXdr2oObHKI9w4Hv1XPKc898mE4kgYx58oqsc/JqqdLMDI4YjOLzom+EMlW8HFUd0QfjfAvxSL6sEq/a42fQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- JS -->
+    <script src="/src/assets/js/main.js"></script>
+    <!-- Fontawesone -->
+    <script src="https://kit.fontawesome.com/99e1031307.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Ovo&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --primary: #194a7a;
+    --secondary: #eff4fd;
+    --fontprime: "Poppins", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-family: var(--fontprime);
+    /* width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        135deg,
+        #121212 25%,
+        #1a1a1a 25%,
+        #1a1a1a 50%,
+        #121212 50%,
+        #121212 75%,
+        #1a1a1a 75%,
+        #1a1a1a
+    );
+    background-size: 40px 40px;
+    animation: move 4s linear infinite; */
+}
+
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 40px 40px;
+  }
+}
+
+.register {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-container {
+    background-color: #ffff;
+    width: 450px;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.123);
+    border-radius: 10px;
+    padding: 20px 40px ;
+    position: relative;
+}
+
+.register-container::after {
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-color: var(--primary);
+    border-radius: 10px;
+    position: absolute;
+    z-index: -9;
+    bottom: -20px;
+    left: -30px;
+}
+
+.register-container::before {
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    position: absolute;
+    z-index: -9;
+    top: -30px;
+    right: -40px;
+    box-shadow: 0 0 5px 5px #19548f41;
+}
+
+.logo {
+    text-align: center;
+}
+
+.register-quote {
+    text-align: start;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.small-quote {
+    font-size: 12px;
+    color: gray;
+    margin-top: 10px;
+}
+
+.form-field {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.input-field label {
+    font-size: 13px;
+    color: rgb(90, 86, 86);
+}
+
+.input-field input {
+    padding: 10px 10px;
+    border-radius: 5px;
+    border: 2px solid rgba(128, 128, 128, 0.582);
+    outline: none;
+    transition: .5s;
+    -webkit-transition: .5s;
+}
+
+.input-field input:focus {
+    border:  2px solid var(--primary);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.212);
+    padding: 10px 15px;
+}
+
+.input-field input::placeholder {
+    color: rgba(128, 128, 128, 0.911);
+}
+
+label.error {
+    font-size: 10px;
+    color: red;
+}
+
+.pass {
+    position: relative;
+}
+
+.pass input {
+    width: 100%;
+}
+
+.eye {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.checkbox-field {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.checkbox-field p {
+    font-size: 13px;
+}
+
+.checkbox-field p a {
+    color: var(--primary);
+    font-weight: 500;
+}
+
+.container input {
+    display: none;
+  }
+  
+.container {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 15px;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+  
+.checkmark {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 1.3em;
+    width: 1.3em;
+    background-color: #2196F300;
+    border-radius: 0.25em;
+    transition: all 0.25s;
+ }
+  
+.container input:checked ~ .checkmark {
+    background-color: var(--primary);
+}
+  
+.checkmark:after {
+    content: "";
+    position: absolute;
+    transform: rotate(0deg);
+    border: 0.1em solid black;
+    left: 0;
+    top: 0;
+    width: 1.05em;
+    height: 1.05em;
+    border-radius: 0.25em;
+    transition: all 0.25s, border-width 0.1s;
+  }
+
+.container input:checked ~ .checkmark:after {
+    left: 0.45em;
+    top: 0.25em;
+    width: 0.25em;
+    height: 0.5em;
+    border-color: #fff0 white white #fff0;
+    border-width: 0 0.15em 0.15em 0;
+    border-radius: 0em;
+    transform: rotate(45deg);
+}
+
+.form-field input[type=submit] {
+    border: none;
+    background-color: var(--primary);
+    color: var(--secondary);
+    padding: 10px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.158);
+    cursor: pointer;
+}
+
+.form-field input[type=submit]:hover {
+    background-color: #19548f;
+}
+
+.have-account {
+    text-align: center;
+    font-size: 14px
+}
+
+.have-account p a {
+    color: var(--primary);
+    font-weight: 500;
+}
+
+.toast {
+    position: fixed;
+    right: 50px;
+    top: 50px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    border-bottom: 3px solid rgb(22, 216, 22);
+    font-size: 15px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    color: rgb(22, 216, 22);
+    transition: display 0.5s, opacity 0.5s linear;
+    opacity: 0;
+}
+
+.toast.show {
+    opacity: 1;
+}
+
+.toast.hidde {
+    opacity: 0;
+}
+
+@media (max-width: 551px) {
+    .register-container {
+        width: 80%;
+        padding: 20px 20px;
+        margin: auto;
+    }
+
+    .register-quote {
+        font-size: 17px;
+    }
+}
+
+/* Login */
+
+.login-checkbox-field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+}
+
+.login-checkbox-field a {
+    color: var(--primary);
+    font-weight: 500;
+}
+
+.login-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Forgot Password */
+
+.forgot_password {
+    background-color: white;
+    width: 450px;
+    padding: 20px 30px;
+    border-radius: 5px;
+}
+
+.forgot-logo {
+    text-align: center;
+}
+
+.forgot-logo img {
+    width: 150px;
+}
+
+.forgot-name {
+    font-size: 13px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.forgot-quote {
+    font-size: 15px;
+    margin-top: 20px;
+    color: gray
+}
+
+.backTo-login {
+    text-align: end;
+    margin: 10px 0;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.forgotToast,
+.resetToast {
+    position: fixed;
+    bottom: -100px;
+    opacity: 0;
+    background-color: #def2d6;
+    color: #607457;
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0;
+    text-align: center;
+    transition: .7s;
+    font-weight: 500;
+}
+
+.forgotToast.show,
+.resetToast.show {
+    bottom: 100px;
+    opacity: 1;
+}
+
+.forgotToast.hidden,
+.resetToast.hidden {
+    bottom: -100px;
+    opacity: 0;
+}
+
+@media (max-width: 480px) {
+    .forgot_password {
+        width: 90%;
+        padding: 20px;
+    }
+}
+  
+  
